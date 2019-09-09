@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#E2E2E2"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#00574B"
+        android:gravity="center_horizontal"
+        android:paddingTop="15dp"
+        android:paddingBottom="15dp"
+        android:text="iClip"
+        android:textColor="#ffffff"
+        android:textSize="20sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        />
+
+    <Button
+        android:id="@+id/btn_choose_music"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:text="选择本地音乐"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/title"
+        />
+
+    <TextView
+
+        android:id="@+id/main_tv_music_name"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="10dp"
+        android:text="当前播放的音乐："
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_choose_music"
+        />
+
+
+    <com.chinaso.demo.widget.CustomSeekBar
+        android:id="@+id/seek_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="2dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="10dp"
+        android:paddingTop="5dp"
+        android:progressDrawable="@drawable/shape_seek_line"
+
+        android:thumb="@drawable/shape_seek_circle_yellow"
+        app:layout_constraintTop_toBottomOf="@+id/main_tv_music_name"
+        />
+
+    <LinearLayout
+        android:id="@+id/ll_choose"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@+id/seek_bar"
+        >
+
+        <Button
+            android:id="@+id/btn_choose_current_start"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="设置当前播放为起点"
+            />
+
+        <Button
+            android:id="@+id/btn_choose_current_end"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="25dp"
+            android:text="设置当前播放为终点"
+            app:layout_constraintLeft_toRightOf="@+id/btn_choose_current_start"
+            />
+    </LinearLayout>
+
+
+    <TextView
+        android:id="@+id/tv_start"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="20dp"
+        android:text="选择起点："
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ll_choose"
+        />
+
+    <com.chinaso.demo.widget.CustomSeekBar
+        android:id="@+id/seek_bar_start"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="2dp"
+        android:layout_marginRight="10dp"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
+        android:progressDrawable="@drawable/shape_seek_line"
+        android:thumb="@drawable/shape_seek_circle_yellow"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_start"
+        />
+
+    <LinearLayout
+        android:id="@+id/ll_trimming_start"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@+id/seek_bar_start"
+        >
+
+        <Button
+            android:id="@+id/btn_ll_trimming_start_left"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="向左微调"
+            />
+
+        <Button
+            android:id="@+id/btn_ll_trimming_start_right"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="25dp"
+            android:text="向右微调"
+            />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_end"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="20dp"
+        android:text="选择终点："
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ll_trimming_start"
+        />
+
+    <com.chinaso.demo.widget.CustomSeekBar
+        android:id="@+id/seek_bar_end"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="2dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="10dp"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
+        android:progress="100"
+        android:progressDrawable="@drawable/shape_seek_line2"
+        android:thumb="@drawable/shape_seek_circle_yellow"
+        app:layout_constraintTop_toBottomOf="@+id/tv_end"
+        />
+
+    <LinearLayout
+        android:id="@+id/ll_trimming_end"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@+id/seek_bar_end"
+        >
+
+        <Button
+            android:id="@+id/btn_ll_trimming_end_left"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="向左微调"
+            />
+
+        <Button
+            android:id="@+id/btn_ll_trimming_end_right"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="25dp"
+            android:text="向右微调"
+            />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ll_trimming_end"
+        >
+
+        <CheckBox
+            android:id="@+id/btn_play"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:background="#D49F6E"
+            android:button="@null"
+            android:checked="false"
+            android:gravity="center"
+            android:padding="8dp"
+            android:text="开始播放"
+            app:layout_constraintRight_toRightOf="parent"
+            />
+
+    </LinearLayout>
+
+
+</android.support.constraint.ConstraintLayout>
