@@ -8,15 +8,15 @@
 ![动画演示.gif](https://upload-images.jianshu.io/upload_images/2312237-d3cf9054c7df98a7.gif?imageMogr2/auto-orient/strip)
 
 
-###功能如下：
+## 功能如下：
 1.app可以设置一首音乐的任意起始点位置，然后可以无限重复播放这一段音乐，也就是AB复读。
 2.可以快捷设置当前播放的位置为起点或者终点
 3.微调当前的起始点位置
 4.选择本地音乐功能
 
-#技术点：
+## 技术点：
 1.项目使用MediaPlayer来实现音乐的播放；
 2.AB重复播放的技术是使用一个递归调用的定时器思路来实现的；
- ###APK下载链接:
+## APK下载链接:
 https://pan.baidu.com/s/1DZolJKhQ75arVn0SqUzGxA
 
