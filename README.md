@@ -1,7 +1,7 @@
 # iClip
 一款android下的音乐播放器Demo，可以从本地选择歌曲实现任意一段位置的循环播放，也就是AB循环播放
 
-截图如下
+## 截图如下
 ![主页.png](https://upload-images.jianshu.io/upload_images/2312237-ad7f852e78a7e2a2.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 ![选择本地音乐.png](https://upload-images.jianshu.io/upload_images/2312237-52bfd37f50889608.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
